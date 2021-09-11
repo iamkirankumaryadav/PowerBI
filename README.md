@@ -24,6 +24,8 @@
 
 ### Data Preview
 
+![Data Preview](Image/DataPreview.png)
+
 <table>
   <tr><th>Data</th><th>Column Quality</th><th>Column Distribution</th><th>Column Profiling</th></tr>
   <tr><td>Show Errors</td><td>:white_check_mark:</td><td>:x:</td><td>:white_check_mark:</td></tr>
