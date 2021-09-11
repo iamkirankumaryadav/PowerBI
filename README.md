@@ -11,7 +11,7 @@
 
 ### Important Considerations 
 
-`Direct Query` Mode
+`Direct Query` Mode is less suitable if :
 
 - There is significant `load` time to get data from the back end source.
 - A lot of users will use the reports.
