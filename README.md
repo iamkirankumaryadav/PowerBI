@@ -37,4 +37,12 @@
   <tr><td>Show Avg</td><td>:x:</td><td>:x:</td><td>:white_check_mark:</td></tr>
 </table>
 
+### Unique vs Distinct
 
+`Unique` : Value which appears only one time in the entire column 
+
+`Distinct` : Unique value of all the categories in the entire column 
+
+e.g. (Apple, Mango, Grapes, Kiwi, Kiwi)  
+- `Unique` Value : `3` (Kiwi is not unique)
+- `Distinct` Value : `4` (Apple, Mango, Grapes, Kiwi)
