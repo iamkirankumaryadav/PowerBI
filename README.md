@@ -21,3 +21,12 @@
 
 - `1GB` limit for datasets stored in shared capacities in a Power BI Service.
 - Can only be refreshed `8` times a day by setting up a scheduled refresh.
+
+### Data Preview
+
+<table>
+  <tr><th>Data</th><th>Column Quality</th><th>Column Distribution</th><th>Column Profiling</th></tr>
+  <tr><td>Show Errors.</td><td>:white_check_mark:</td><td>:x:</td><td>:white_check_mark:</td></tr>
+</table>
+
+
