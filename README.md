@@ -15,7 +15,7 @@
 
 - There is significant `load` time to get data from the back end source.
 - A lot of users will use the reports.
-- There are a lot of Row Level Security rules active on the dataset.
+- There are a lot of `RLS` row level security rules active on the dataset.
 
 `Import` Mode
 
