@@ -43,6 +43,6 @@
 
 `Distinct` : Unique value of all the categories in the entire column 
 
-e.g. (Apple, Mango, Grapes, Kiwi, Kiwi)  
-- `Unique` Value : `3` (Kiwi is not unique)
-- `Distinct` Value : `4` (Apple, Mango, Grapes, Kiwi)
+e.g. ( Apple, Mango, Grapes, Kiwi, Kiwi )  
+- `Unique` Value : `3` ( Kiwi is not unique )
+- `Distinct` Value : `4` ( Apple, Mango, Grapes, Kiwi )
