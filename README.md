@@ -17,7 +17,7 @@
 - A lot of users will use the reports.
 - There are a lot of `RLS` row level security rules active on the dataset.
 
-`Import` Mode
+`Import` Mode limitations :
 
 - `1GB` limit for datasets stored in shared capacities in a Power BI Service.
 - Can only be refreshed `8` times a day by setting up a scheduled refresh.
