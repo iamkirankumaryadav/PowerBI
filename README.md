@@ -1,6 +1,6 @@
 # Power BI
 
-[Microsoft Power BI](https://docs.microsoft.com/en-us/power-bi/) | [DAX](https://docs.microsoft.com/en-us/dax/) | [Power Query M](https://docs.microsoft.com/en-us/powerquery-m/)
+<a href="https://docs.microsoft.com/en-us/power-bi/" target=_blank>Microsoft Power BI</a> | <a href="https://docs.microsoft.com/en-us/dax/" target=_blank>DAX</a> | <a href="https://docs.microsoft.com/en-us/powerquery-m/" target=_blank>Power Query M</a>
 
 ### Storage Mode
 
