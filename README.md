@@ -2,6 +2,14 @@
 
 <a href="https://docs.microsoft.com/en-us/power-bi/">Microsoft Power BI</a> | <a href="https://docs.microsoft.com/en-us/dax/" target="_blank">DAX</a> | <a href="https://docs.microsoft.com/en-us/powerquery-m/" target="_blank">Power Query M</a>
 
+### What is Power BI
+
+- `BI`: Business Intelligence
+- Analyze data to help businesses to make better business decisions.
+- Power BI is Microsoft's Business Analytics Service + Self Service Business Intelligence Tool.
+- Power BI `Desktop` is free and easy to use.
+- Helps to get data ready for well presented analysis.
+
 ### Storage Mode
 
 <table>
