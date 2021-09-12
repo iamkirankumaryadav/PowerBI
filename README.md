@@ -51,7 +51,7 @@
 - The values are visible within tables in a `Data View`
 - Calculated columns understand `Row Context`
 - Calculated columns are typically use for `Filtering` data.
-- Calculated columns are useless for creating any numerical values or aggregations (SUM, AVERAGE, COUNT, etc.)
+- Calculated columns are useless for creating any numerical values or aggregations (`SUM`, `AVERAGE`, `COUNT`, etc.)
 
 ### Data Preview
 
