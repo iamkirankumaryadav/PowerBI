@@ -53,6 +53,8 @@
 - Calculated columns are typically use for `Filtering` data.
 - Calculated columns are useless for creating any numerical values or aggregations (`SUM`, `AVERAGE`, `COUNT`, etc.)
 
+`Note` : Do not use calculated columns for aggregation formulas or for the values to be used for visualizations.
+
 ### Data Preview
 
 ![Data Preview](Image/DataPreview.png)
