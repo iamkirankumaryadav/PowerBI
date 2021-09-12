@@ -47,7 +47,7 @@
 ### Calculated Columns 
 
 - Calculated columns refers to entire `Table` or `Column`
-- Calculated columns generated values for each `Row`
+- Calculated columns generates fixed values for each `Row`
 - The values are visible within tables in a `Data View`
 - Calculated columns understand `Row Context`
 - Calculated columns are typically use for `Filtering` data.
