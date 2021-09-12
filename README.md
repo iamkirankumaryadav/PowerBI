@@ -51,9 +51,20 @@
 - The values are visible within tables in a `Data View`
 - Calculated columns understand `Row Context`
 - Calculated columns are typically use for `Filtering` data.
+- Calculated columns are stored in the memory and consumes memory.
 - Calculated columns are useless for creating any numerical values or aggregations (`SUM`, `AVERAGE`, `COUNT`, etc.)
 
 `Note` : Do not use calculated columns for aggregation formulas or for the values to be used for visualizations.
+
+### Measures
+
+- Measures are `DAX` formulas used to generate new calculated values at run time.
+- Measures references entire table or column.
+- Measures are not visible as column in a table.
+- Measures are only visible within the visualizations in the reports.
+- Measures are evaluated based on `Filter Context`
+- Measures are recalculated when the fields or filters around them changes.
+- Measures are useful for creating any numerical or aggregated values. 
 
 ### Data Preview
 
