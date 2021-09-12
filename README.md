@@ -37,7 +37,7 @@
   <tr><td>Receives, interprets and executes all DAX requests</td><td>Compresses and encodes raw data.</td></tr>  
   <tr><td>Process the DAX queries.</td><td>Receives query from Formula engine, executes and returns a datacache.</td></tr>
   <tr><td>Works with Datacache to evaluate the DAX query and return a result.</td><td>Vertipaq : Data in memory (Import Mode).<br>Direct Query : Read data directly from the source (Live connection : Azure, SQL, SAP, etc.)</td></tr>
-  <tr><td>Formula engine evaluates the query for result.</td><td>Storage engine help to grab some data that will be needed to evaluate that query.</td></tr>
+  <tr><td>Formula engine evaluates the query for result.</td><td>Storage engine help to grab some data that will be needed to evaluate that query. (Storage engine provides datacache for fast evaluation)</td></tr>
 </table>
 
 
