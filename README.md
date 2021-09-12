@@ -10,6 +10,18 @@
 - Power BI `Desktop` is free and easy to use.
 - Helps to get data ready for well presented analysis.
 
+### Tables
+
+<table>
+  <tr><th>Data Table</th><th>Lookup Table</th></tr>
+  <tr><td>Fact Table</td><td>Dimension Table</td></tr>  
+  <tr><td>Contains measurable values.</td><td>Contains descriptive attributes.</td></tr>
+  <tr><td>Quantity, Revenue, Sales Amount, Revenue, etc.</td><td>Product ID, Category, Sub Category, Customer Name, Age, etc.</td></tr>
+  <tr><td>Many rows for one ID.</td><td>Only one row for one ID.</td></tr>
+  <tr><td>Primary Keys + Foreign Keys</td><td>Only Primary Keys.</td></tr>
+</table>
+
+
 ### Storage Mode
 
 <table>
