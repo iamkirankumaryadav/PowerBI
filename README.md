@@ -50,7 +50,7 @@
 
 <table>
   <tr><th>Value Encoding</th><th>Hash Encoding</th><th>Run Length Encoding (RLE)</th></tr>
-  <tr><td>Mathematical process used to reduce number of bits needed to store integer values.</td><td>Identifies distinct string values and creates a new table with index. (One for each category label)</td><td>Reduces the size of daatset by identifying repeated values found in the adjacent rows (combinations)</td></tr>  
+  <tr><td>Mathematical process used to reduce number of bits needed to store integer values (No floaating point)</td><td>Identifies distinct string values and creates a new table with index (Assign a unique integer value)</td><td>Reduces the size of daatset by identifying repeated values found in the adjacent rows (combinations)</td></tr>  
  
 </table>
 
