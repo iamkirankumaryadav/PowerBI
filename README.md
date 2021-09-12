@@ -11,6 +11,7 @@
 - Helps to get data ready for well presented analysis.
 
 `Data Types` represents how values are stored by the DAX Storage Engine.
+
 `Formatting` represents how values appears to end users (%, $, date, etc)
 
 ### Tables
