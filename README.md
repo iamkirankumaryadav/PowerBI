@@ -46,6 +46,14 @@
 
 `Vertipaq` uses a columnar data structure, store data as individual columns to quickly evaluate DAX queries.
 
+### How `Vertipaq` compressess and encodes the data ?
+
+<table>
+  <tr><th>Value Encoding</th><th>Hash Encoding</th><th>Run Length Encoding (RLE)</th></tr>
+  <tr><td>Mathematical process used to reduce number of bits needed to store integer values.</td><td>Identifies distinct string values and creates a new table with index. (One for each category label)</td><td>Reduces the size of daatset by identifying repeated values found in the adjacent rows (combinations)</td></tr>  
+ 
+</table>
+
 Performance is better if the number of rows are more and number of columns are less.
 
 ### Important Considerations 
