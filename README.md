@@ -66,6 +66,18 @@
 - Measures are recalculated when the fields or filters around them changes.
 - Measures are useful for creating any numerical or aggregated values. 
 
+### Evaluation Context
+
+- `Filter` or `Row` context tells `DAX` exactly how to Evaluate | Calculate `Measures` and `Calculated Columns` in Data Model.
+
+<table>
+  <tr><th>Filter Context</th><th>Row Context</th></tr>
+  <tr><td>Filters the tables in the data model.</td><td>Iterates through the rows in a table.</td></tr>  
+  <tr><td>DAX created filter context when dimensions are added in row, column, slicers or filters in a report.</td><td>DAX creates row context when you add a calculated columns to your data model.</td></tr>
+  <tr><td>CALCULATE can be used to create or modify existing filter context.</td><td>Iterator functions (SUMX, MAXX, RANKX, etc) use row context to evaluate row level calculations.</td></tr>
+  <tr><td>Filter context only propagates from One side to Many side of a relationship.</td><td>Row context do not propagates automatically through table relationships (RELATED and RELATEDTABLE functions are used for propagation)</td></tr>
+</table>
+
 ### Data Preview
 
 ![Data Preview](Image/DataPreview.png)
