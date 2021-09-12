@@ -21,7 +21,6 @@
   <tr><td>Primary Keys + Foreign Keys</td><td>Only Primary Keys.</td></tr>
 </table>
 
-
 ### Storage Mode
 
 <table>
@@ -30,6 +29,16 @@
   <tr><td>Power BI Desktop uses the imported data to interact with the visualizations.</td><td>Power BI Desktop queries the live data source to interact with the visualizations. (Cloud Platform, Google Analytics, Database, etc.)</td></tr>
   <tr><td>Refreshing the data will reimport the entire dataset again.</td><td>Refreshing will be limited to the data source.</td></tr>
 </table>
+
+### Engine 
+
+<table>
+  <tr><th>Formula Engine</th><th>Storage Engine</th></tr>
+  <tr><td>Receives, interprets and executes all DAX requests</td><td>Compresses and encodes raw data.</td></tr>  
+  <tr><td>Process the DAX queries.</td><td>Receives query from Formula engine, executes and returns a datacache.</td></tr>
+  <tr><td>Works with Datacache to evaluate the DAX query and return a result.</td><td>Vertipaq : Data in memory (Import Mode).<br>Direct Query : Read data directly from the source (Live connection : Azure, SQL, SAP, etc.)</td></tr>
+</table>
+
 
 ### Important Considerations 
 
