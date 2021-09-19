@@ -3,6 +3,7 @@
 - Returns a `Table` that represents a subset of another table or expression.
 - `FILTER` is a `CALCULATE` Modifier and an `Iterator` function.
 - Adds a new `Filter Context`
+- Help to reduce the number of `Rows` and `Columns` in a table ( Filters table )
 
 ```DAX
 FILTER ( Table, Expression )
