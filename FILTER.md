@@ -2,6 +2,7 @@
 
 - Returns a `Table` that represents a subset of another table or expression.
 - Add a new `Filter Context`
+- `FILTER` is a `CALCULATE` Modifier and a `Iterator` function.
 
 ```DAX
 FILTER ( Table, Expression )
@@ -25,3 +26,5 @@ CALCULATE (
     )
 )
 ```
+
+Because `FILTER` returns a `Table`, it can be used as a input to an another function.
