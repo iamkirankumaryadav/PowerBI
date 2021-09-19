@@ -1,8 +1,8 @@
 # FILTER
 
 - Returns a `Table` that represents a subset of another table or expression.
-- Add a new `Filter Context`
-- `FILTER` is a `CALCULATE` Modifier and a `Iterator` function.
+- `FILTER` is a `CALCULATE` Modifier and an `Iterator` function.
+- Adds a new `Filter Context`
 
 ```DAX
 FILTER ( Table, Expression )
