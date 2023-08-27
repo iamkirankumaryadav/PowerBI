@@ -4,15 +4,14 @@
 
 ### What is Power BI
 
-- `BI`: Business Intelligence
-- Analyze data to help businesses to make better business decisions.
+- Analyze data to help businesses to make better decisions.
 - Power BI is Microsoft's Business Analytics Service + Self Service Business Intelligence Tool.
 - Power BI `Desktop` is free and easy to use.
-- Helps to get data ready for well presented analysis.
+- Helps to get data ready for well-presented analysis.
 
-`Data Types` represents how values are stored by the DAX Storage Engine.
+`Data Types` represents how the DAX Storage Engine stores values.
 
-`Formatting` represents how values appears to end users (%, $, date, etc)
+`Formatting` represents how values appear to end users (%, $, date, etc.)
 
 ### Tables
 
@@ -38,31 +37,31 @@
 
 <table>
   <tr><th>Formula Engine</th><th>Storage Engine</th></tr>
-  <tr><td>Receives, interprets and executes all DAX requests</td><td>Compresses and encodes raw data (Reduce the amount of memory needed to evaluate DAX query).</td></tr>  
-  <tr><td>Process the DAX queries.</td><td>Receives query from Formula engine, executes and returns a datacache.</td></tr>
-  <tr><td>Works with Datacache to evaluate the DAX query and return a result.</td><td>Vertipaq : Data in memory (Import Mode).<br>Direct Query : Read data directly from the source (Live connection : Azure, SQL, SAP, etc.)</td></tr>
-  <tr><td>Formula engine evaluates the query for result.</td><td>Storage engine help to grab some data that will be needed to evaluate that query. (Storage engine provides datacache for fast evaluation)</td></tr>
+  <tr><td>Receives, interprets and executes all DAX requests</td><td>Compresses and encodes raw data (Reduces the amount of memory needed to evaluate DAX query).</td></tr>  
+  <tr><td>Process the DAX queries.</td><td>Receives query from Formula engine, executes and returns a data cache.</td></tr>
+  <tr><td>Works with Datacache to evaluate the DAX query and return a result.</td><td>Vertipaq: Data in memory (Import Mode).<br>Direct Query: Read data directly from the source (Live connection: Azure, SQL, SAP, etc.)</td></tr>
+  <tr><td>Formula engine evaluates the query for the result.</td><td>Storage engine helps grab some data needed to evaluate that query. (Storage engine provides data cache for fast evaluation)</td></tr>
 </table>
 
-`Vertipaq` uses a columnar data structure, store data as individual columns to quickly evaluate DAX queries.
+`Vertipaq` uses a columnar data structure, and stores data as individual columns to evaluate DAX queries quickly.
 
-### How `Vertipaq` compressess and encodes the data ?
+### How `Vertipaq` compresses and encodes the data?
 
 <table>
   <tr><th>Value Encoding</th><th>Hash Encoding</th><th>Run Length Encoding (RLE)</th></tr>
-  <tr><td>Mathematical process used to reduce number of bits needed to store integer values (No floaating point)</td><td>Identifies distinct string values and creates a new table with index (Assign a unique integer value)</td><td>Reduces the size of daatset by identifying repeated values found in the adjacent rows (combinations)</td></tr>  
+  <tr><td>Mathematical process used to reduce the number of bits needed to store integer values (No floating point)</td><td>Identifies distinct string values and creates a new table with index (Assign a unique integer value)</td><td>Reduces the size of the dataset by identifying repeated values found in the adjacent rows (combinations)</td></tr>  
  
 </table>
 
-Performance is better if the number of rows are more and number of columns are less.
+Performance is better if the number of rows is more and the number of columns is less.
 
 ### Important Considerations 
 
 `Direct Query` Mode is less suitable if :
 
-- There is significant `load` time to get data from the back end source.
+- There is significant `load` time to get data from the back-end source.
 - A lot of users will use the reports.
-- There are a lot of `RLS` row level security rules active on the dataset.
+- There are a lot of `RLS` row-level security rules active on the dataset.
 
 `Import` Mode limitations :
 
@@ -71,36 +70,36 @@ Performance is better if the number of rows are more and number of columns are l
 
 ### Calculated Columns 
 
-- Calculated columns refers to entire `Table` or `Column`
-- Calculated columns generates fixed values for each `Row`
+- Calculated columns refer to the entire `Table` or `Column`
+- Calculated columns generate fixed values for each `Row`
 - The values are visible within tables in a `Data View`
 - Calculated columns understand `Row Context`
-- Calculated columns are typically use for `Filtering` data.
-- Calculated columns are stored in the memory and consumes memory.
+- Calculated columns are typically used for `Filtering` data.
+- Calculated columns are stored in the memory and consume memory.
 - Calculated columns are useless for creating any numerical values or aggregations (`SUM`, `AVERAGE`, `COUNT`, etc.)
 
-`Note` : Do not use calculated columns for aggregation formulas or for the values to be used for visualizations.
+`Note`: Do not use calculated columns for aggregation formulas or for the values to be used for visualizations.
 
 ### Measures
 
 - Measures are `DAX` formulas used to generate new calculated values at run time.
 - Measures references entire table or column.
-- Measures are not visible as column in a table.
+- Measures are not visible as columns in a table.
 - Measures are only visible within the visualizations in the reports.
 - Measures are evaluated based on `Filter Context`
-- Measures are recalculated when the fields or filters around them changes.
+- Measures are recalculated when the fields or filters around them change.
 - Measures are useful for creating any numerical or aggregated values. 
 
 ### Evaluation Context
 
-- `Filter` or `Row` context tells `DAX` exactly how to Evaluate | Calculate `Measures` and `Calculated Columns` in Data Model.
+- `Filter` or `Row` context tells `DAX` exactly how to Evaluate | Calculate `Measures` and `Calculated Columns` in the Data Model.
 
 <table>
   <tr><th>Filter Context</th><th>Row Context</th></tr>
   <tr><td>Filters the tables in the data model.</td><td>Iterates through the rows in a table.</td></tr>  
-  <tr><td>DAX created filter context when dimensions are added in row, column, slicers or filters in a report.</td><td>DAX creates row context when you add a calculated columns to your data model.</td></tr>
-  <tr><td>CALCULATE can be used to create or modify existing filter context.</td><td>Iterator functions (SUMX, MAXX, RANKX, etc) use row context to evaluate row level calculations.</td></tr>
-  <tr><td>Filter context only propagates from One side to Many side of a relationship.</td><td>Row context do not propagates automatically through table relationships (RELATED and RELATEDTABLE functions are used for propagation)</td></tr>
+  <tr><td>DAX created filter context when dimensions are added in rows, columns, slicers or filters in a report.</td><td>DAX creates row context when you add a calculated column to your data model.</td></tr>
+  <tr><td>CALCULATE can be used to create or modify existing filter context.</td><td>Iterator functions (SUMX, MAXX, RANKX, etc.) use row context to evaluate row-level calculations.</td></tr>
+  <tr><td>Filter context only propagates from One side to Many sides of a relationship.</td><td>Row context does not propagate automatically through table relationships (RELATED and RELATED TABLE functions are used for propagation)</td></tr>
 </table>
 
 ### Data Preview
@@ -120,12 +119,12 @@ Performance is better if the number of rows are more and number of columns are l
   <tr><td>Show Avg</td><td>:x:</td><td>:x:</td><td>:white_check_mark:</td></tr>
 </table>
 
-### Unique vs Distinct
+### Unique vs. Distinct
 
-`Unique` : Value which appears only one time in the entire column 
+`Unique`: Value which appears only one time in the entire column 
 
-`Distinct` : Unique value of all the categories in the entire column 
+`Distinct`: Unique value of all the categories in the entire column 
 
 e.g. ( Apple, Mango, Grapes, Kiwi, Kiwi )  
-- `Unique` Value : `3` ( Kiwi is not unique )
-- `Distinct` Value : `4` ( Apple, Mango, Grapes, Kiwi )
+- `Unique` Value: `3` ( Kiwi is not unique )
+- `Distinct` Value: `4` ( Apple, Mango, Grapes, Kiwi )
