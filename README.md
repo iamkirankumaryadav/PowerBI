@@ -4,8 +4,13 @@
 
 ### What is Power BI
 
-- Analyze data to help businesses to make better decisions.
+- Power BI is a BI tool that helps to Analyze, clean, and visualize data.
+- We can create different reports and dashboards using Power BI.
 - Power BI is Microsoft's Business Analytics Service + Self Service Business Intelligence Tool.
+- Power BI is a collection of components (Power Query + Power Pivot + Power View)
+- Power Query: ETL tool + cleans the data.
+- Power Pivot: Data modelling, connecting data from multiple sources, creating relationships between them.
+- Power View: Data visualization, helps to create 250+ Charts for presentation, reports and dashboards.
 - Power BI `Desktop` is free and easy to use.
 - Helps to get data ready for well-presented analysis.
 
